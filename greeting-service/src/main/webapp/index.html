@@ -220,7 +220,7 @@
           if (!href.endsWith("/")) {
               workerScriptUrl = "thorntail-istio-circuit-breaker/" + workerScriptUrl;
           }
-          
+          var worker = new Worker(workerScriptUrl);
           worker.onerror = function (e) {
             console.log(e)
           };
